@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="header">
+    <button onclick="showLogin()">Login</button>
+    <button onclick="showSignup()">Sign Up</button>
+    <button onclick="showMyBlogs()">My Blogs</button>
+  </div>
+  <center>
+  <div class="main">
+    <div class="form-container" id="postForm">
+      <h2>Your Posts</h2>
+      <input type="text" id="postTitle" placeholder="Title" required>
+      <textarea id="postDescription" placeholder="Description" required></textarea>
+      <button class="small-blue-button" onclick="submitPost()">Post</button>
+    </div>
+  </div>
+
+  <div class="form-container" id="loginForm" style="display:none;">
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Username" required>
+    <input type="password" id="loginPassword" placeholder="Password" required>
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="form-container" id="signupForm" style="display:none;">
+    <h2>Sign Up</h2>
+    <input type="text" id="signupUsername" placeholder="Username" required>
+    <input type="email" id="signupEmail" placeholder="Email" required>
+    <input type="password" id="signupPassword" placeholder="Password" required>
+    <button onclick="signup()">Sign Up</button>
+  </div>
+  
+  <div class="posts-container" id="postsList">
+    <!-- Le titre des posts récents et des posts de l'utilisateur seront ajoutés via JavaScript -->
+  </div>
+
+  <script src="blog.js"></script>
+    </center>
+</body>
+</html>
